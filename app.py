@@ -10,7 +10,6 @@ from os import chdir, getcwd, listdir, path
 import codecs
 from PIL import Image
 from PIL import ImageTk
-import helpwindow
 # import locale
 # locale.getdefaultlocale()
 # import os
@@ -123,7 +122,7 @@ def load(lg,gender):
 def telecharger(lg,gender):
     conf(rate.get(), volume.get()/10, lg,gender)
     audio = my_entry.get("1.0",END)
-    engine.save_to_file(audio,  root.filename+'.mp3')
+    engine.save_to_file(audio,  'AudioBook'+'.mp3')
     engine.runAndWait()
 # switching languages
 languages = [
